@@ -1,4 +1,4 @@
-from youtube_statistics import ytstats
+from youtube_statistics import YTstats
 import os
 from os.path import join, dirname
 from dotenv import load_dotenv
@@ -9,9 +9,6 @@ load_dotenv(dotenv_path)
 # Accessing variables.
 ytuser = os.getenv('YTUSERID')
 api_key = os.getenv('APIKEY')
-# Amazing Discoveries South Africa
-channel_id= "UC1oOoBASMrTyUBSltYcx0jA"
 
 
-yt = ytstats(api_key, channel_id)
-yt.get_channel_statistics()
+yt = YTstats()

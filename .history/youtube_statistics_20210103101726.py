@@ -1,4 +1,19 @@
-class ytstats:
+import os
+from os.path import join, dirname
+from dotenv import load_dotenv
+
+dotenv_path = join(dirname(__file__), '.env')
+load_dotenv(dotenv_path)
+
+# Accessing variables.
+ytuser = os.getenv('YTUSERID')
+api_key = os.getenv('APIKEY')
+
+# Using variables.
+#print(status)
+print(api_key)
+
+class YTstats:
     def __init__(self, api_key, channel_id):
         self.api_key = api_key
         self.channel_id = channel_id

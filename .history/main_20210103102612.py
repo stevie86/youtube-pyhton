@@ -1,4 +1,4 @@
-from youtube_statistics import ytstats
+from youtube_statistics import YTstats
 import os
 from os.path import join, dirname
 from dotenv import load_dotenv
@@ -13,5 +13,5 @@ api_key = os.getenv('APIKEY')
 channel_id= "UC1oOoBASMrTyUBSltYcx0jA"
 
 
-yt = ytstats(api_key, channel_id)
+yt = YTstats(api_key, channel_id)
 yt.get_channel_statistics()
